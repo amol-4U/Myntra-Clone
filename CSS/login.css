@@ -1,0 +1,208 @@
+.measurement_image{
+    position:fixed;
+   opacity:.5;
+}
+
+:root{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;    
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    background-color:#fdeeee;
+    z-index:1;
+
+}
+
+/* header CSS */
+
+header{
+    width:100vw;
+    height:80px;
+    display:grid;
+    grid:" . logo nav . search icon ." 1fr/
+         30px 53px 450px 3fr max-content max-content 30px;
+
+    align-items: center;
+    gap:0 30px;
+    position:relative;
+
+    box-shadow:0 0 16px rgba(12, 7, 7, 0.1);
+    background-color:#fff;
+}
+
+.logo{
+    
+    grid-area:logo;
+}
+
+.logo img{
+    width:53px;
+    height:36px;
+}
+
+nav{
+    grid-area:nav;
+    width:470px;
+    height:max-content;
+    position:absolute;
+    left:45px;
+}
+
+nav a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color:black;
+    margin-right:28px;
+}
+
+
+.header_search{
+    grid-area:search;
+    height:max-content;
+    width:513px;
+    margin-right:2rem;
+    background-color:#f5f5f6;
+}
+
+.header_search svg{
+    width:1.4rem;
+   position:relative;
+   top:.5rem;
+   left:-.3rem;
+   fill:#777;
+   margin-left:1rem;
+   
+   
+   
+}
+
+.header_search input{
+    width:465px;
+    height:40px;
+    font-size:inherit;
+    font-family:inherit;
+    background-color:#f5f5f6;
+    border:none;
+    outline:none;
+}
+
+
+
+.header_icon{
+    grid-area:icon;
+    height:50%;
+    width:5rem;
+    position:relative;
+}
+
+.header_icon > :nth-child(1){
+    position:absolute;
+    width:1rem;
+    left:.4rem;
+
+   
+}
+
+.header_icon > :nth-child(2){
+    position:absolute;
+    bottom:0;
+    left:-.5rem;
+    font-size: .7rem;
+    font-weight: 600;  
+
+}
+
+.header_icon > :nth-child(3){
+    position:absolute;
+    top:.3rem;
+    right:0;
+    width:1.2rem;
+}
+
+.header_icon > :nth-child(4){
+    position:absolute;
+    bottom:0;
+    right:0;
+    font-size: .7rem;
+    font-weight: 600;
+}
+
+/* main CSS */
+
+main{
+    width:400px;
+    height:670px;
+    margin:30px auto 0 auto;
+    background-color:#fff;
+    box-shadow:0 0 16px rgba(0,0,0,0.2); 
+}
+
+main img{
+    width:400px; 
+}
+
+main form{
+    margin:35px;
+    font-size:.8rem;
+    
+}
+
+main form ul{
+    list-style-type: none;   
+}
+
+main form ul li{
+    margin-top:28px;
+    
+}
+main form ul li h2 span{
+    font-weight: 400;
+}
+
+main form ul li input{
+    width:330px;
+    height:38px;
+    font-size:1rem;
+   
+}
+
+input::placeholder{
+    font-size:1rem;
+    letter-spacing:1px;
+}
+
+main form ul > :nth-child(3){
+    font-size:.7rem;  
+}
+
+button{
+    width:328px;
+    height:38px;
+    text-transform:uppercase;
+    font-size:1rem;
+    font-weight:500;
+    color:#fff;
+    background-color:#ff3f6c;
+    border:none;
+    outline:none;
+    cursor:pointer;
+}
+
+main form ul > :nth-child(4){
+    font-size:1rem;
+}
+
+main a{
+    text-decoration:none;
+    color:#ff3f6c;
+}
