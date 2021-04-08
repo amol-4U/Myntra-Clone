@@ -1,5 +1,6 @@
 .measurement_image{
     position:fixed;
+    top:0;
     opacity: .5;
    
 }
@@ -16,6 +17,7 @@
     font-size: 16px;
     --black:#000;
     --white:#fff;
+    --red: #ee5f73;
 
 }
 
@@ -30,6 +32,7 @@ body{
     height:100vh;
     background-color:var(--white);
     z-index:1;
+    background-image: repeating-linear-gradient(90deg,red, red 1px, transparent 1px, transparent 30px),repeating-linear-gradient(180deg,red, red 1px, transparent 1px, transparent 30px);
 }
 
 /* header CSS */
@@ -67,17 +70,62 @@ nav{
     height:auto;
     position:relative;
     left:2.7rem;
-    border:1px solid red;
-    
+    border:1px solid red;   
+}
+
+nav> :nth-child(1):hover{
+    border-bottom:5px solid var(--red);
 }
 
 nav a{
     text-decoration: none;
     text-transform: uppercase;
     color:black;
-    padding:25px 25px 25px 0;
+    padding:25px 13px 25px 12px;
     cursor:pointer;
+    border:1px solid black;
 }
+
+/* header hover navigation menu CSS */
+
+.men{
+    width:1140px;
+    height:435px;
+    background-color:var(--white);
+    display:grid;
+    grid-template-columns: auto auto auto auto auto;
+    position:relative;
+    left:9%;
+
+}
+
+.men div{
+    margin:13px 0 0 40px;
+   
+}
+.men ul {
+    list-style-type: none;
+    margin-bottom: 25px;
+}
+
+.men ul li {
+    margin-bottom: 5px;
+}
+
+
+.men ul > :nth-child(1) a{
+   color:var(--red);
+}
+
+.men ul li a{
+    text-decoration:none;
+    font-family: "white";
+    font-size:14px;
+    color:var(--black);
+    
+}
+
+
 
 
 /* header search bar CSS */
@@ -131,6 +179,7 @@ nav a{
     width:1.1rem;
     left:.2rem;
     top:.2rem;
+    cursor:default;
 }
 
 .header_icon > :nth-child(2){
@@ -140,6 +189,7 @@ nav a{
     font-size: .7rem;
     font-weight: 600; 
     padding-bottom: 1rem;
+    cursor:default;
 }
 
 .header_icon > :nth-child(3){
