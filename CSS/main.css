@@ -5,11 +5,10 @@
    
 }
 
-
-
 @font-face{
     font-family:"white";
-    src: url("../fonts/whitney-cufonfonts/whitneysemibold-webfont.woff")format("woff"),  url("../fonts/whitney-cufonfonts/whitneysemibold-webfont.woff2")format("woff2"), url("../fonts/whitney-cufonfonts/whitneysemibold.ttf")format("truetype")
+    src: url("../fonts/whitney-cufonfonts/whitneysemibold-webfont.woff")format("woff"),  url("../fonts/whitney-cufonfonts/whitneysemibold-webfont.woff2")format("woff2"), url("../fonts/whitney-cufonfonts/whitneysemibold.ttf")format("truetype");
+    
 }
 
 :root{
@@ -17,7 +16,10 @@
     font-size: 16px;
     --black:#000;
     --white:#fff;
-    --red: #ee5f73;
+    --men: #ee5f73;
+    --women:#ff00bd;
+    --gray_anchor_background:#fafafa;
+    --gray_anchor_color:#444;
 
 }
 
@@ -32,7 +34,7 @@ body{
     height:100vh;
     background-color:var(--white);
     z-index:1;
-    background-image: repeating-linear-gradient(90deg,red, red 1px, transparent 1px, transparent 30px),repeating-linear-gradient(180deg,red, red 1px, transparent 1px, transparent 30px);
+    /* background-image: repeating-linear-gradient(90deg,red, red 1px, transparent 1px, transparent 30px),repeating-linear-gradient(180deg,red, red 1px, transparent 1px, transparent 30px); */
 }
 
 /* header CSS */
@@ -64,7 +66,7 @@ header{
     cursor:pointer;
 }
 
-nav{
+.nav{
     grid-area:nav;
     width:470px;
     height:auto;
@@ -73,58 +75,115 @@ nav{
     border:1px solid red;   
 }
 
-nav> :nth-child(1):hover{
-    border-bottom:5px solid var(--red);
+.nav_men:hover{
+    border-bottom:5px solid var(--men);
 }
 
-nav a{
+
+
+.nav_women:hover{
+    border-bottom:5px solid var(--women);
+}
+
+.nav_main{
     text-decoration: none;
     text-transform: uppercase;
     color:black;
     padding:25px 13px 25px 12px;
     cursor:pointer;
     border:1px solid black;
+    position:relative;
 }
 
-/* header hover navigation menu CSS */
+/* header men hover navigation CSS */
 
-.men{
+.hover_navigation{
     width:1140px;
     height:435px;
     background-color:var(--white);
+    /* overflow: hidden; */
     display:grid;
     grid-template-columns: auto auto auto auto auto;
-    position:relative;
-    left:9%;
-
-}
-
-.men div{
-    margin:13px 0 0 40px;
-   
-}
-.men ul {
-    list-style-type: none;
-    margin-bottom: 25px;
-}
-
-.men ul li {
-    margin-bottom: 5px;
-}
-
-
-.men ul > :nth-child(1) a{
-   color:var(--red);
-}
-
-.men ul li a{
-    text-decoration:none;
-    font-family: "white";
-    font-size:14px;
-    color:var(--black);
+    position:absolute;
+    top:48px;
+    left:-45px; 
+    border:1px solid blue;
     
 }
 
+/* user point at main navigation menu and other navigation menu links appeare CSS */
+
+.men_nav{
+    display:none;
+}
+
+.nav_men:hover ~ .men_nav, .men_nav:hover{
+    display: block;
+}
+
+.women_nav{
+    display:none;
+}
+
+.nav_women:hover ~ .women_nav, .women_nav:hover{
+    display: block;
+}
+
+
+
+
+.hover_navigation ul{
+    padding:15px 30px;  
+}
+ .hover_navigation > :nth-child(2), .hover_navigation > :nth-child(4){
+    background-color:var(--gray_anchor_background);
+}
+.ul {
+    list-style-type: none;
+}
+
+.hover_nav_element{
+    display:inline-block;
+    margin-bottom: 5px;   
+}
+
+
+/* hover menus headers CSS */
+.men_hover_nav_header {
+   color:var(--men) ;
+   text-decoration: none;
+   display:inline-block;
+   margin-top:10px;
+   margin-bottom: 15px;
+}
+
+.women_hover_nav_header:hover{
+    color:var(--women) ;
+ }
+
+ .women_hover_nav_header {
+    color:var(--women) ;
+    text-decoration: none;
+    display:inline-block;
+    margin-top:10px;
+    margin-bottom: 15px;
+ }
+ 
+ .women_hover_nav_header:hover{
+     color:var(--women) ;
+  }
+
+/* hover menus general elements */
+ .hover_nav_element{
+    text-decoration:none;
+    font-family: "white";
+    font-size:14px;
+    color:var(--gray_anchor_color);    
+}
+
+.hover_nav_element:hover{
+    color:var(--black)
+}
 
 
 
