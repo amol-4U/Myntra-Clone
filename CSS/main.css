@@ -18,6 +18,9 @@
     --white:#fff;
     --men: #ee5f73;
     --women:#ff00bd;
+    --kids:#f57418;
+    --home_living:#eed107;
+    --offers:#00bdb2;
     --gray_anchor_background:#fafafa;
     --gray_anchor_color:#444;
 
@@ -74,16 +77,30 @@ header{
     left:2.7rem;
     border:1px solid red;   
 }
+/* navigation menu hover bottom border */
 
 .nav_men:hover{
     border-bottom:5px solid var(--men);
 }
 
-
-
 .nav_women:hover{
     border-bottom:5px solid var(--women);
 }
+
+.nav_kids:hover{
+    border-bottom:5px solid var(--kids);
+}
+
+.nav_home_living:hover{
+    border-bottom:5px solid var(--home_living);
+}
+
+.nav_offers:hover{
+    border-bottom:5px solid var(--offers);
+}
+
+
+
 
 .nav_main{
     text-decoration: none;
@@ -101,14 +118,12 @@ header{
     width:1140px;
     height:435px;
     background-color:var(--white);
-    /* overflow: hidden; */
+    overflow: hidden;
     display:grid;
     grid-template-columns: auto auto auto auto auto;
     position:absolute;
     top:48px;
     left:-45px; 
-    border:1px solid blue;
-    
 }
 
 /* user point at main navigation menu and other navigation menu links appeare CSS */
@@ -117,7 +132,7 @@ header{
     display:none;
 }
 
-.nav_men:hover ~ .men_nav, .men_nav:hover{
+.nav_men:hover ~ .men_nav, .men_nav:hover, body{
     display: block;
 }
 
@@ -128,6 +143,33 @@ header{
 .nav_women:hover ~ .women_nav, .women_nav:hover{
     display: block;
 }
+
+
+.kids_nav{
+    display:none;
+}
+
+.nav_kids:hover ~ .kids_nav, .kids_nav:hover{
+    display: block;
+}
+
+.home_living_nav{
+    display:none;
+}
+
+.nav_home_living:hover ~ .home_living_nav, .home_living_nav:hover{
+    display: block;
+}
+
+.offers_nav{
+    display:none;
+}
+
+.nav_offers:hover ~ .offers_nav, .offers_nav:hover{
+    display: block;
+}
+
+
 
 
 
@@ -157,10 +199,6 @@ header{
    margin-bottom: 15px;
 }
 
-.women_hover_nav_header:hover{
-    color:var(--women) ;
- }
-
  .women_hover_nav_header {
     color:var(--women) ;
     text-decoration: none;
@@ -168,10 +206,32 @@ header{
     margin-top:10px;
     margin-bottom: 15px;
  }
+
+ .kids_hover_nav_header {
+    color:var(--kids) ;
+    text-decoration: none;
+    display:inline-block;
+    margin-top:10px;
+    margin-bottom: 15px;
+ }
+
+ .home_living_nav_header {
+    color:var(--home_living) ;
+    text-decoration: none;
+    display:inline-block;
+    margin-top:10px;
+    margin-bottom: 15px;
+ }
+
+ .offers_nav_header {
+    color:var(--offers) ;
+    text-decoration: none;
+    display:inline-block;
+    margin-top:10px;
+    margin-bottom: 15px;
+ }
  
- .women_hover_nav_header:hover{
-     color:var(--women) ;
-  }
+ 
 
 /* hover menus general elements */
  .hover_nav_element{
