@@ -12,8 +12,8 @@
 }
 
 :root{
-    font-family: "white",-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 16px;
+    font-family:"white", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
     --black:#000;
     --white:#fff;
     --men: #ee5f73;
@@ -38,6 +38,7 @@ body{
     background-color:var(--white);
     z-index:1;
     /* background-image: repeating-linear-gradient(90deg,red, red 1px, transparent 1px, transparent 30px),repeating-linear-gradient(180deg,red, red 1px, transparent 1px, transparent 30px); */
+   
 }
 
 /* header CSS */
@@ -52,11 +53,12 @@ header{
 
     align-items: center;
     gap:0 30px;
-
+    
     position:fixed;
     top:0;
     box-shadow:0 0 16px rgba(12, 7, 7, 0.1);
     background-color:var(--white);
+    z-index:1;
 }
 
 .logo{   
@@ -75,7 +77,6 @@ header{
     height:auto;
     position:relative;
     left:2.7rem;
-    border:1px solid red;   
 }
 /* navigation menu hover bottom border */
 
@@ -100,30 +101,30 @@ header{
 }
 
 
-
-
 .nav_main{
+   
     text-decoration: none;
     text-transform: uppercase;
     color:black;
-    padding:25px 13px 25px 12px;
+    padding:25px 19px 25px 12px;
     cursor:pointer;
-    border:1px solid black;
     position:relative;
+    margin:0;
 }
 
 /* header men hover navigation CSS */
 
 .hover_navigation{
-    width:1140px;
+    width:1160px;
     height:435px;
     background-color:var(--white);
     overflow: hidden;
     display:grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     position:absolute;
     top:48px;
     left:-45px; 
+    border:7px solid var(--gray_anchor_background);
 }
 
 /* user point at main navigation menu and other navigation menu links appeare CSS */
@@ -132,7 +133,7 @@ header{
     display:none;
 }
 
-.nav_men:hover ~ .men_nav, .men_nav:hover, body{
+.nav_men:hover ~ .men_nav, .men_nav:hover{
     display: block;
 }
 
@@ -184,10 +185,7 @@ header{
     list-style-type: none;
 }
 
-.hover_nav_element{
-    display:inline-block;
-    margin-bottom: 5px;   
-}
+
 
 
 /* hover menus headers CSS */
@@ -196,7 +194,7 @@ header{
    text-decoration: none;
    display:inline-block;
    margin-top:10px;
-   margin-bottom: 15px;
+   margin-bottom: 15px; 
 }
 
  .women_hover_nav_header {
@@ -235,14 +233,18 @@ header{
 
 /* hover menus general elements */
  .hover_nav_element{
+    display:inline-block;
+    margin-bottom: 5px;
     text-decoration:none;
-    font-family: "white";
-    font-size:14px;
-    color:var(--gray_anchor_color);    
+    font-family: sans-serif;
+    font-size:13px;
+    color:var(--gray_anchor_color); 
+
 }
 
 .hover_nav_element:hover{
-    color:var(--black)
+    color:var(--black);
+    font-family:"white";
 }
 
 
@@ -348,4 +350,5 @@ header{
 /* main CSS */
 main{
     margin-top:85px;
+    
 }
